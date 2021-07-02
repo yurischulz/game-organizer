@@ -59,7 +59,7 @@ export function Home() {
         <Profile />
         <ButtonIcon
           icon="plus"
-        // onPress={handleSignIn}
+          onPress={handleAppointmentCreate}
         />
       </View>
 

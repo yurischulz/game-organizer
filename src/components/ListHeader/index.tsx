@@ -6,11 +6,14 @@ import { styles } from './styles';
 type Props = {
   title: string | undefined;
   subtitle: string | undefined;
+  isForm?: boolean;
 }
 
-export function ListHeader({ title, subtitle }: Props) {
+export function ListHeader({ title, subtitle, isForm = false }: Props) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,
+    isForm ? { marginTop: 32, marginBottom: 16 } : { marginVertical: 32 }
+    ]}>
       <Text style={styles.title}>
         {title}
       </Text>

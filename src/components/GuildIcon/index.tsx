@@ -3,7 +3,12 @@ import { Image, View } from 'react-native';
 
 import { styles } from './styles';
 
-export function GuildIcon() {
+type Props = {
+  guildId: string
+  iconId: string | null
+}
+
+export function GuildIcon({ guildId, iconId }: Props) {
   const uri = 'https://github.com/yurischulz.png';
 
   return (
